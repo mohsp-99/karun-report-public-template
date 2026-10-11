@@ -28,10 +28,10 @@ by the build command; see [font notes](typst/fonts/README.md).
 python scripts/build.py
 ```
 
-Output: `typst/build/report.pdf`. To build without Python:
+Output: `output/report.pdf`. To build without Python:
 
 ```sh
-typst compile --root typst --font-path typst/fonts typst/report/report.typ typst/build/report.pdf
+typst compile --root typst --font-path typst/fonts typst/report/report.typ output/report.pdf
 ```
 
 ## Work with an agent
@@ -63,6 +63,7 @@ CLAUDE.md                         Claude entrypoint importing AGENTS.md
 .agents/skills/karun-report-typst/ Canonical report skill for Codex
 .claude/skills/karun-report-typst/ Generated Claude Code mirror
 .github/workflows/validate.yml    Build and skill consistency checks
+output/                          Final PDFs (gitignored)
 scripts/                         Cross-platform build and skill sync; Linux setup
 docs/                            Authoring and specialized style references
 typst/
@@ -70,7 +71,7 @@ typst/
   template/                      Shared engines and brand/ artwork
   fonts/                         Dubai and B Nazanin
   examples/                      Regression documents
-  build/                         Generated PDFs/PNGs (gitignored)
+  build/                         Temporary review files; remove after inspection
 ```
 
 ## Validation and maintenance
@@ -80,7 +81,8 @@ python scripts/build.py --examples --render
 python scripts/sync_skills.py --check
 ```
 
-The render command prints separate page directories for visual inspection.
+Final PDFs are saved in `output/`. The render command prints temporary page directories for visual inspection.
+After inspection run `python scripts/build.py --clean` to remove `typst/build/`.
 Compilation alone cannot verify layout or RTL order. Maintain the skill under
 `.agents/skills/`, then run `python scripts/sync_skills.py` and commit both copies.
 CI checks skill parity and compiles the starter plus every regression example.

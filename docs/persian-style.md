@@ -206,7 +206,7 @@ These are per-report, not library-level, because their tuning is content-driven.
 Run from the repository root:
 
 ```sh
-typst compile --root typst --font-path typst/fonts typst/report/report.typ "typst/build/report.pdf"
+typst compile --root typst --font-path typst/fonts typst/report/report.typ "output/report.pdf"
 ```
 
 Then verify, in this order:

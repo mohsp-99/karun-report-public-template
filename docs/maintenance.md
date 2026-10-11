@@ -69,3 +69,10 @@ The installer never clones over existing files or deletes `.git`.
 
 The public template starts with an independent history. Its remote is separate
 from the original private repository; do not push private history into it.
+
+## Final deliverables and scratch cleanup
+
+Final PDFs are saved in `output/`. Rendered pages use temporary `typst/build/`.
+Inspect the pages, then run `python scripts/build.py --clean`; this removes only
+that scratch directory and preserves final PDFs and source files. Ordinary PDF
+builds do not create `typst/build/`. Do not commit a build-directory placeholder.

@@ -3,10 +3,10 @@
 //
 // 1. Fill in metadata.typ.
 // 2. Write your content below using plain Typst markup (see the cheatsheet).
-// 3. Build from the repository root; output goes into typst/build/.
+// 3. Build from the repository root; output goes into output/.
 //    The build script supplies the bundled font path:
 //      python scripts/build.py
-//      typst watch --root typst --font-path typst/fonts typst/report/report.typ "typst/build/My Report.pdf"   (live preview)
+//      typst watch --root typst --font-path typst/fonts typst/report/report.typ "output/My Report.pdf"   (live preview)
 //
 // Set lang to "en" (left-to-right) or "fa" (Persian, right-to-left).
 //

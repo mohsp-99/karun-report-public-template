@@ -20,7 +20,8 @@ cleanup directly on `.typ` source.
 | `typst/template/` | Shared engines and `brand/` artwork |
 | `typst/fonts/` | Dubai and B Nazanin fonts and provenance notes |
 | `typst/examples/` | Diagram and Persian regression documents |
-| `typst/build/` | Ignored generated PDFs and rendered pages |
+| `output/` | Final deliverable PDFs (gitignored) |
+| `typst/build/` | Temporary review files; remove after inspection |
 | `docs/` | Authoring, diagram, Persian house-style, maintenance references |
 | `.agents/skills/` | Canonical Codex skills |
 | `.claude/skills/` | Generated Claude Code skill mirrors |
@@ -70,13 +71,14 @@ from another directory. Python 3.10+ and Typst 0.15.1 are the tested baseline.
 python scripts/build.py                         # current report PDF
 python scripts/build.py --examples              # report + all regression PDFs
 python scripts/build.py --examples --render     # PDFs + PNG pages
+python scripts/build.py --clean                  # after visual inspection
 python scripts/sync_skills.py --check            # fail on mirror drift
 ```
 
 Without Python, from the root:
 
 ```sh
-typst compile --root typst --font-path typst/fonts typst/report/report.typ typst/build/report.pdf
+typst compile --root typst --font-path typst/fonts typst/report/report.typ output/report.pdf
 typst compile --root typst --font-path typst/fonts typst/report/report.typ "typst/build/page-{p}.png" --format png --ppi 100
 ```
 
@@ -93,3 +95,15 @@ See [docs/maintenance.md](docs/maintenance.md) for discovery, migration paths,
 and CI. Setup scripts must preserve `.git` and existing report files. Generated
 reports are local artifacts; template publication does not authorize publishing
 a user's report content.
+
+## Finish with a clean workspace
+
+Keep final PDFs in `output/` and all editable sources and supplied assets in
+their normal locations. Treat `typst/build/` as disposable review scratch only.
+After inspecting the rendered pages, run `python scripts/build.py --clean` to
+remove the entire temporary directory. Do not finish with page renders, contact
+sheets, comparison baselines, logs, or stale PDFs left in the workspace. Preserve
+user files; move any requested deliverable out of scratch before cleanup.
+Use the standard branded cover without additional decorative or product images
+unless the user explicitly requests them. A later user correction overrides an
+embedded source design brief.

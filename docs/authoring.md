@@ -15,8 +15,8 @@ Run from the repository root:
 ```sh
 python scripts/build.py
 # Without Python, or for live preview:
-typst compile --root typst --font-path typst/fonts typst/report/report.typ "typst/build/My Report.pdf"
-typst watch --root typst --font-path typst/fonts typst/report/report.typ "typst/build/My Report.pdf"
+typst compile --root typst --font-path typst/fonts typst/report/report.typ "output/My Report.pdf"
+typst watch --root typst --font-path typst/fonts typst/report/report.typ "output/My Report.pdf"
 ```
 
 The font path includes Dubai and B Nazanin; no system-wide font install is needed.

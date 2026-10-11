@@ -8,10 +8,9 @@ __pycache__/
 Thumbs.db
 
 # Build artifacts â€” every generated document goes into a build/ folder.
-# The folders themselves are kept (via .gitkeep); their contents are ignored.
+# Temporary build directories are removed after review.
 # Checked-in sample outputs under samples/ are NOT affected.
 **/build/*
-!**/build/.gitkeep
 
 # Local agent state and credentials
 .claude/settings.local.json
@@ -20,3 +19,6 @@ Thumbs.db
 .env.*
 !.env.example
 .venv/
+
+# Final PDFs remain local deliverables.
+/output/

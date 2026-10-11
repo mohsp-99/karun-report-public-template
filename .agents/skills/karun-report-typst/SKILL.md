@@ -65,7 +65,7 @@ scripts are prose tools, not Typst parsers: never apply them to `.typ` files.
    ```
 
    The build script supplies the project root and font path. With no Python, use
-   `typst compile --root typst --font-path typst/fonts typst/report/report.typ typst/build/report.pdf`. Fix relevant errors and warnings, then
+   `typst compile --root typst --font-path typst/fonts typst/report/report.typ output/report.pdf`. Fix relevant errors and warnings, then
    inspect the PDF or rendered pages for RTL direction, font fallback, clipping,
    isolated headings, crowded tables, and blank pages. Recompile after fixes.
    If Typst is unavailable, preserve the source and give the exact command; do
@@ -148,3 +148,12 @@ engine `karun.typ` still must not be modified. The compact living reference is
 
 For extended markup reference, read [docs/authoring.md](../../../docs/authoring.md).
 Load diagram and Persian house-style references only when those modes apply.
+
+## Final delivery and cleanup
+
+Keep the standard branded cover; add a cover image only when explicitly requested
+by the user, respecting later corrections over source design comments. Final
+PDFs belong in `output/`. After visual checks, run
+`python scripts/build.py --clean` to remove temporary `typst/build/` contents and
+the directory itself. Retain the final PDF, editable sources, and supplied assets.
+Link the final PDF and report any source issues; do not leave review artifacts.
