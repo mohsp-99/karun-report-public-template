@@ -1,0 +1,22 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts â€” every generated document goes into a build/ folder.
+# The folders themselves are kept (via .gitkeep); their contents are ignored.
+# Checked-in sample outputs under samples/ are NOT affected.
+**/build/*
+!**/build/.gitkeep
+
+# Local agent state and credentials
+.claude/settings.local.json
+.codex/
+.env
+.env.*
+!.env.example
+.venv/
