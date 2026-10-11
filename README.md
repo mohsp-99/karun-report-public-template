@@ -85,6 +85,15 @@ Compilation alone cannot verify layout or RTL order. Maintain the skill under
 `.agents/skills/`, then run `python scripts/sync_skills.py` and commit both copies.
 CI checks skill parity and compiles the starter plus every regression example.
 
+### Persian writing companion
+
+The bundled [persian-writing skill](https://github.com/ali2000hos/persian-writing)
+helps both agents with Persian register, wording, orthography, and prose checks.
+It is available as `$persian-writing` in Codex or `/persian-writing` in Claude
+Code and is linked from the report workflow. See
+[integration rules and pinned version](docs/persian-writing.md), including how
+to preserve Karun's ezafe spelling, fonts, and Typst syntax.
+
 - [Authoring and tables](docs/authoring.md)
 - [Diagram toolkit](docs/diagrams.md)
 - [Optional Persian house style](docs/persian-style.md)

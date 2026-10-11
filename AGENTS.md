@@ -3,6 +3,12 @@
 This repository builds branded English (LTR) and Persian (RTL) PDFs with Typst.
 This is the shared guide for Codex and Claude Code. Before writing or modifying
 a report, read [the report skill](.agents/skills/karun-report-typst/SKILL.md).
+For Persian writing, editing, or translation, also read
+[the Persian-writing skill](.agents/skills/persian-writing/SKILL.md) and
+[its Karun integration rules](docs/persian-writing.md). Those integration rules
+resolve the upstream skill's general defaults for this Typst template: preserve
+Karun fonts, layout, ezafe spelling, and technical tokens; never run prose
+cleanup directly on `.typ` source.
 
 ## Repository map
 

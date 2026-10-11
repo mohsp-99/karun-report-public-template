@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Verify skill mirrors
         run: python scripts/sync_skills.py --check
+      - name: Test Persian-writing toolkit
+        run: python -B -m unittest discover -s .agents/skills/persian-writing/tests
       - name: Install Typst
         run: |
           bash scripts/cloud-setup.sh

@@ -12,3 +12,17 @@ source license for those binaries. Obtain applicable terms from the respective
 rights holders before redistributing or relicensing them.
 
 No blanket open-source license has been added to this template.
+
+## Persian-writing skill
+
+The vendored `ali2000hos/persian-writing` v1.4.0 package is copyright 2026
+persian-writing contributors, licensed under the
+[MIT license](.agents/skills/persian-writing/LICENSE), with exceptions described
+there for fonts and attribution for the bundled dictionary. Its Claude mirror
+retains the same notices. See [the pinned source](docs/persian-writing.md).
+
+The package's Vazirmatn and Lalezar fonts retain their upstream SIL Open Font
+License 1.1 terms. Copies are included in
+[Vazirmatn-OFL.txt](docs/licenses/Vazirmatn-OFL.txt) and
+[Lalezar-OFL.txt](docs/licenses/Lalezar-OFL.txt). These fonts belong to the
+companion skill; Karun report builds continue to use `typst/fonts/`.

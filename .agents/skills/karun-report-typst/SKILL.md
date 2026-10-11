@@ -27,6 +27,13 @@ tables, branding, and pagination.
 
 ## Workflow
 
+For Persian prose, also use [persian-writing](../persian-writing/SKILL.md).
+First read [the Karun integration rules](../../../docs/persian-writing.md),
+then its writing-style and orthography references. Use it to improve wording
+within the user's requested scope; this template still owns Typst layout,
+fonts, technical-token handling, and the ezafe spelling below. Its cleanup
+scripts are prose tools, not Typst parsers: never apply them to `.typ` files.
+
 1. Determine whether the report is English or Persian. Collect only supplied
    metadata and body content. Classification values are `access_level`: 1
    Internal, 2 External, 3 Public; and `confidentiality`: 1 Normal, 2

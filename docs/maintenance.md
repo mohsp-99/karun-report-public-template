@@ -10,6 +10,11 @@ Claude Code discovers its checked-in mirror in `.claude/skills/karun-report-typs
 Both skill files link to the same detailed references in `docs/`. They require
 the complete repository and are not independently installable skill bundles.
 
+The companion `persian-writing` package is also discoverable in both skill
+directories. Its pinned upstream revision and Karun compatibility rules are in
+[persian-writing.md](persian-writing.md). Keep that vendored package intact;
+maintain local integration rules separately and run its bundled tests when updating.
+
 After editing canonical skill files:
 
 ```sh
