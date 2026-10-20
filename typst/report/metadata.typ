@@ -1,24 +1,15 @@
-// =============================================================================
-// metadata.typ — EDIT THIS for each report (the Typst port of metadata.tex).
-// Fill in the values below; do not edit karun.typ.
-// =============================================================================
-
+// Values taken from the header of Pargar_Project_Execution_Structure_FA.md.
+// Fields marked (تکمیل شود) were not in the source and need confirmation.
 #let meta = (
-  // --- Titles -------------------------------------------------------------
-  title: "Main Report Title",            // large title on the cover
-  subtitle: "Report Subtitle",           // gray line under the title
-  summary_title: "Document Summary Title", // shown in the metadata table + header
-
-  // --- Stakeholders -------------------------------------------------------
-  employer: "Recipient Name / Department / Company", // prepared for
-  producer: "Author Name / Department / Company",     // prepared by
-
-  // --- Classification -----------------------------------------------------
-  access_level: 3,     // 1 = Internal | 2 = External     | 3 = Public
-  confidentiality: 1,  // 1 = Normal   | 2 = Confidential | 3 = Top Secret
-
-  // --- Identification -----------------------------------------------------
-  doc_id: "FILE-NAME-V01-20260101",
-  date: "2026/01/01",  // header/cover date (use YYYY/MM/DD, or Persian digits for fa)
-  year: 2026,          // copyright year on the cover footer
+  // The full title is split across title + subtitle so it fits on one cover line.
+  title: "ساختار اجرای پروژه‌های پرگار",
+  subtitle: "در شرکت کارون — نسخه ۲.۰، بازطراحی ساختار اجرا",
+  summary_title: "ساختار اجرای پروژه‌های پرگار در شرکت کارون",
+  employer: "مدیرعامل، مدیران واحدها، مدیران پروژه و مسئولان حوزه‌ها",
+  producer: "(تکمیل شود)",
+  access_level: 1,     // "ابلاغ داخلی" in the source → Internal
+  confidentiality: 1,  // not stated in the source — confirm
+  doc_id: "(تکمیل شود)",
+  date: "۲۰۲۶/۱۰/۱۸",
+  year: 2026,
 )
